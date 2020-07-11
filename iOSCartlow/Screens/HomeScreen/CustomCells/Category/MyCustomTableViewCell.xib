@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCustomTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="MyCustomTableViewCell" customModule="iOSCartlow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFn-76-Fec">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BFz-U8-QC0">
+                                <rect key="frame" x="20" y="0.0" width="280" height="110"/>
+                                <color key="backgroundColor" red="0.75459941202546976" green="1" blue="0.42324496309641724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4F2-cS-NTx">
+                                    <size key="itemSize" width="60" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="-1" id="QUY-Lj-FRE"/>
+                                    <outlet property="delegate" destination="-1" id="I0c-AS-QVd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BFz-U8-QC0" secondAttribute="trailing" constant="20" id="Em7-Qk-WoS"/>
+                            <constraint firstAttribute="bottom" secondItem="BFz-U8-QC0" secondAttribute="bottom" id="RR8-q4-w22"/>
+                            <constraint firstItem="BFz-U8-QC0" firstAttribute="top" secondItem="KFn-76-Fec" secondAttribute="top" id="uPb-p8-KiG"/>
+                            <constraint firstItem="BFz-U8-QC0" firstAttribute="leading" secondItem="KFn-76-Fec" secondAttribute="leading" constant="20" id="xxB-xY-IQQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="KFn-76-Fec" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7vB-pv-0u8"/>
+                    <constraint firstItem="KFn-76-Fec" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Fsr-m2-s2h"/>
+                    <constraint firstAttribute="trailing" secondItem="KFn-76-Fec" secondAttribute="trailing" id="pkg-4E-euF"/>
+                    <constraint firstAttribute="bottom" secondItem="KFn-76-Fec" secondAttribute="bottom" id="rws-hH-PKf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="BFz-U8-QC0" id="Nyb-Yx-Nwx"/>
+            </connections>
+            <point key="canvasLocation" x="78.400000000000006" y="116.94152923538232"/>
+        </tableViewCell>
+    </objects>
+</document>
